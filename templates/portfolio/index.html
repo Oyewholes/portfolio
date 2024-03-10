@@ -1,0 +1,307 @@
+<!-- templates/portfolio/index.html -->
+{% load static %} {% load crispy_forms_tags %} {% load tailwind_filters %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Inside the <head> tag of your HTML file -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-600 top-0 z-0">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 py-4 fixed top-0 z-50 w-full">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="font-bold text-gray-300 text-xl"
+          ><span class="text-green-500 text-3xl">W</span>HOLES</a
+        >
+        <div>
+          <a href="#projects" class="text-green-500 hover:text-white mr-4"
+            >Projects</a
+          >
+          <a href="#skills" class="text-white hover:text-green-500 mr-4"
+            >Skills</a
+          >
+          <a href="#contact" class="text-white hover:text-green-500">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <br />
+    <br />
+
+    <!-- Main content -->
+    <div class="container mx-auto mt-8">
+      <div>
+        <header class="text-center mb-8">
+          <div class="mx-auto mb-6 h-48 w-48 rounded-full overflow-hidden">
+            <img
+              src="{%static 'portfolio/images/wole.jpeg' %}"
+              alt="Profile Picture"
+              class="h-full w-full object-cover object-center"
+            />
+          </div>
+          <h1
+            class="text-4xl font-bold bg-gradient-to-r from-green-300 to-blue-300 text-transparent bg-clip-text"
+          >
+            Welcome to My Portfolio
+          </h1>
+          <h6
+            class="bg-gradient-to-r from-green-300 to-blue-300 text-transparent bg-clip-text"
+          >
+            <strong>Oyediran Oyewole</strong>
+          </h6>
+          <p
+            class="text-xl bg-gradient-to-r from-green-300 to-blue-300 text-transparent bg-clip-text"
+          >
+            Full Stack Web Developer
+          </p>
+        </header>
+      </div>
+
+      <!-- Inside your HTML template, such as index.html or resume.html -->
+
+      <section class="resume-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="text-center">
+                <a
+                  href="https://lavender-laney-1.tiiny.site"
+                  class="block mt-4 bg-gray-700 hover:bg-gray-400 text-green-500 font-semibold py-2 px-2 rounded"
+                  target="_blank"
+                  >Download Resume</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Django Projects Section -->
+      <section id="projects" class="mb-12">
+        <h2 class="text-2xl font-bold text-white mb-4">Django Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Project Card 1 -->
+          <div
+            class="bg-white rounded-lg p-4 shadow-md overflow-hidden transform transition-transform hover:rotate-y-180"
+          >
+            <!-- Project Image (Placeholder) -->
+            <img
+              src="{%static 'portfolio/images/projectBlog.png'%}"
+              alt="Project Image"
+              class="w-full h-40 object-cover object-center"
+            />
+            <!-- Project Details -->
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">Blog</h3>
+              <p class="text-sm text-gray-600">
+                A blog that is currently hosted on Render
+              </p>
+              <a
+                href="https://candace.onrender.com"
+                target="_blank"
+                class="block mt-4 bg-gray-700 hover:bg-gray-400 text-white font-semibold py-2 px-4 rounded"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Project Image (Placeholder) -->
+            <img
+              src="{%static 'portfolio/images/Asowunmi.png' %}"
+              alt="Project Image"
+              class="w-full h-40 object-cover object-center"
+            />
+            <!-- Project Details -->
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                A Fashion Website
+              </h3>
+              <p class="text-sm text-gray-600">
+                Description of the second project goes here.
+              </p>
+            </div>
+          </div>
+          <!-- Project Card 3 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Project Image (Placeholder) -->
+            <img
+              src="{%static 'portfolio/images/eventbrite.png' %}"
+              alt="Project Image"
+              class="w-full h-40 object-cover object-center"
+            />
+            <!-- Project Details -->
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                A clone of EventBrite
+              </h3>
+              <p class="text-sm text-gray-600">
+                A personal project using django to clone eventbrite.com
+              </p>
+            </div>
+          </div>
+          <!-- Project Card 4 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Project Image (Placeholder) -->
+            <img
+              src="{%static 'portfolio/images/webclone.png'%}"
+              alt="Project Image"
+              class="w-full h-40 object-cover object-center"
+            />
+            <!-- Project Details -->
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                Stack Overflow Clone
+              </h3>
+              <p class="text-sm text-gray-600">
+                This is a website where you can log in to join various groups
+                and ask questions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <!-- Django icon -->
+          <div class="flex items-center justify-center flex-col">
+            <i class="fab fa-python text-8xl text-blue-500 mb-4"></i>
+            <p class="text-lg font-semibold text-gray-800">Django</p>
+          </div>
+          <!-- HTML icon -->
+          <div class="flex items-center justify-center flex-col">
+            <i class="fab fa-html5 text-8xl text-orange-500 mb-4"></i>
+            <p class="text-lg font-semibold text-gray-800">HTML</p>
+          </div>
+          <!-- CSS icon -->
+          <div class="flex items-center justify-center flex-col">
+            <i class="fab fa-css3-alt text-8xl text-blue-500 mb-4"></i>
+            <p class="text-lg font-semibold text-gray-800">CSS</p>
+          </div>
+          <!-- Tailwind CSS icon -->
+          <div class="flex items-center justify-center flex-col">
+            <img
+              src="{%static 'portfolio/images/tailwind2.png'%}"
+              alt="Tailwind CSS Logo"
+              class="h-24 mb-4"
+            />
+            <p class="text-lg font-semibold text-gray-800">Tailwind CSS</p>
+          </div>
+          <!-- JavaScript icon -->
+          <div class="flex items-center justify-center flex-col">
+            <i class="fab fa-js text-8xl text-yellow-500 mb-4"></i>
+            <p class="text-lg font-semibold text-gray-800">JavaScript</p>
+          </div>
+          <!-- SQL icon -->
+          <div class="flex items-center justify-center flex-col">
+            <i class="fas fa-database text-8xl text-gray-500 mb-4"></i>
+            <p class="text-lg font-semibold text-gray-800">SQL</p>
+          </div>
+        </div>
+      </section>
+      {% comment %}
+      <div>
+        <form
+          class="contact-me-form"
+          action="{% url 'portfolio:contact' %}"
+          method="post"
+        >
+          {% csrf_token %}
+          <div class="mb-4">
+            <label for="{{ form.name.id_for_label }}">Name:</label>
+            {{ form.name }}
+          </div>
+          <div class="mb-4">
+            <label for="{{ form.email.id_for_label }}">Email:</label>
+            {{ form.email }}
+          </div>
+          <div class="mb-4">
+            <label for="{{ form.message.id_for_label }}">Message:</label>
+            {{ form.message }}
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      {% endcomment %}
+
+      <section id="contact" class="mb-12 bg-gray-500 py-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">
+          Contact Me
+        </h2>
+        <!-- Hire Me Section -->
+        <div
+          class="bg-gray-400 rounded-lg shadow-md overflow-hidden mb-8 mx-auto max-w-lg"
+        >
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Hire Me</h3>
+            <p class="text-sm text-gray-600 mb-4">
+              I am available for freelance projects. Let's work together!
+            </p>
+            <!-- Button with Link (Opens in a New Tab) -->
+            <a
+              href="mailto:youremail@example.com"
+              class="block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded text-center"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+        <!-- Form -->
+        <!-- Social Media Links -->
+        <div class="flex items-center justify-center space-x-4">
+          <!-- Twitter -->
+          <a
+            href="https://twitter.com/Oyediranwholes"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-600 hover:text-blue-500"
+          >
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+          <!--Linkedin-->
+          <a
+            href="https://www.linkedin.com/in/oyediran-oyewole-b8b3a8201/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-600 hover:text-blue-500"
+          >
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <!-- GitHub -->
+          <a
+            href="https://github.com/Oyewholes"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-600 hover:text-blue-500"
+          >
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+          <!-- Email -->
+          <a
+            href="mailto:woleoyediran@gmail.com"
+            class="text-gray-600 hover:text-blue-500"
+          >
+            <i class="fas fa-envelope fa-2x"></i>
+          </a>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
